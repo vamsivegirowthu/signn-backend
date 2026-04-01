@@ -76,8 +76,8 @@ io.on('connection', (socket) => {
   }
 });
 
-httpServer.listen(PORT, '0.0.0.0', () => {
-  logger.info(`🖥️ Server running on port ${PORT}`);
+httpServer.listen(PORT, () => {
+  console.log(`🚀 Server running on port ${PORT}`);
 });
 
 logger.info('🔐 Initializing WhatsApp...');
@@ -144,11 +144,4 @@ process.on('SIGINT', async () => {
   process.exit(0);
 });
 
-import express from 'express';
-
-const app = express();
-
-app.get('/api/status', (req, res) => {
-  res.json({ status: "ok" });
-});
 
