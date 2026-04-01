@@ -2,6 +2,17 @@ import 'dotenv/config';
 import pino from 'pino';
 import fs from 'fs';
 
+import express from 'express';
+
+const app = express();
+
+app.get('/', (req, res) => {
+  res.send("Working ✅");
+});
+
+app.listen(process.env.PORT || 3000, '0.0.0.0', () => {
+  console.log("Test server running");
+});
 
 import WhatsAppClient from './whatsapp-client.js';
 import ScanTracker from './scan-tracker.js';
