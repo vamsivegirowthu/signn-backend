@@ -55,7 +55,7 @@ const tempScheduler = {
   io: null,
 };
 
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 3000;
 
 const { httpServer, io } = createDashboardServer({
   scheduler: tempScheduler,
