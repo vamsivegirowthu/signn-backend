@@ -26,9 +26,7 @@ function toCron(time, days) {
 
 export function createDashboardServer({ scheduler, tracker, clinicData, logger }) {
   const app = express();
-  app.get('/api/status', (req, res) => {
-  res.json({ status: "ok" });
-});
+ 
   const httpServer = createServer(app);
   const io = new SocketIO(httpServer, { cors: { origin: '*' } });
 
