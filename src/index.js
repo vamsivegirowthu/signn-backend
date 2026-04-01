@@ -54,7 +54,7 @@ const tempScheduler = {
   io: null,
 };
 
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 const { httpServer, io } = createDashboardServer({
   scheduler: tempScheduler,
@@ -73,8 +73,8 @@ io.on('connection', (socket) => {
   }
 });
 
-httpServer.listen(PORT, () => {
-  logger.info(`🖥️ Dashboard → http://localhost:${PORT}`);
+httpServer.listen(PORT, '0.0.0.0', () => {
+  logger.info(`🖥️ Server running on port ${PORT}`);
 });
 
 logger.info('🔐 Initializing WhatsApp...');
@@ -140,3 +140,7 @@ process.on('SIGINT', async () => {
   await waClient.logout().catch(()=>{});
   process.exit(0);
 });
+
+setInterval(() => {
+  console.log("Server alive...");
+}, 10000);
