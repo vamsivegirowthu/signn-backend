@@ -41,7 +41,7 @@ export default class WhatsAppClient {
         QRCode.toDataURL(qr)
           .then((url) => {
             console.log("✅ QR READY");
-            if (this.onQR) this.onQR(url);
+           this.io.emit("qr_update", { qr });
           })
           .catch((err) => console.error(err));
       }
