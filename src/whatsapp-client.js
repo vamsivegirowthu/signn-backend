@@ -85,7 +85,7 @@ export default class WhatsAppClient {
     const safeMessage = message ? String(message) : "Test message";
 
     return this.sock.sendMessage(number + "@s.whatsapp.net", {
-  caption: safeMessage
+  text: safeMessage
   });
   }
 
