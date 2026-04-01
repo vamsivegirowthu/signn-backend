@@ -144,4 +144,8 @@ process.on('SIGINT', async () => {
   process.exit(0);
 });
 
+setInterval(() => {
+  console.log("Server alive...");
+}, 10000);
+
 
