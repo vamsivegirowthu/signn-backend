@@ -29,11 +29,13 @@ export function createDashboardServer({ scheduler, tracker, clinicData, logger }
   const httpServer = createServer(app);
   const io = new SocketIO(httpServer, { cors: { origin: '*' } });
 
-  app.use(cors());
-  app.use(express.json());
-  // app.use(express.static(path.join(__dirname, '../public')));
+ app.use(cors());
+app.use(express.json());
+
+app.use(express.static(path.join(__dirname, '../public')));
+
   app.get('/', (req, res) => {
-  res.send("Server running ✅");
+  res.sendFile(path.join(__dirname, '../public/index.html'));
 });
 
   if (scheduler) scheduler.io = io;
