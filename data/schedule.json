@@ -1,0 +1,37 @@
+{
+  "reminders": [
+    {
+      "id": "reminder-morning",
+      "label": "Morning Reminder",
+      "description": "Send readiness scan reminder to all staff",
+      "type": "morning",
+      "cron": "45 13 * * 1-6",
+      "time": "08:00",
+      "days": ["mon","tue","wed","thu","fri","sat"],
+      "enabled": true,
+      "emoji": "🌅"
+    },
+    {
+      "id": "reminder-followup",
+      "label": "1-Hour Follow-up",
+      "description": "Remind staff who haven't scanned yet",
+      "type": "followup",
+      "cron": "30 14 * * 1-6",
+      "time": "09:00",
+      "days": ["mon","tue","wed","thu","fri","sat"],
+      "enabled": true,
+      "emoji": "⏰"
+    },
+    {
+      "id": "reminder-supervisor",
+      "label": "Supervisor Alert",
+      "description": "Alert supervisor with list of non-compliant staff",
+      "type": "supervisor",
+      "cron": "37 15 * * 1-6",
+      "time": "10:00",
+      "days": ["mon","tue","wed","thu","fri","sat"],
+      "enabled": true,
+      "emoji": "🚨"
+    }
+  ]
+}

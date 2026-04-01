@@ -1,0 +1,201 @@
+{
+  "logs": [
+    {
+      "date": "2026-03-16",
+      "scans": {},
+      "stats": {},
+      "lastUpdated": "2026-03-16T10:57:06.757Z"
+    },
+    {
+      "date": "2026-03-17",
+      "scans": {
+        "emp-mmu88c77w3hc": {
+          "empId": "emp-mmu88c77w3hc",
+          "empName": "Phani",
+          "clinicId": "clinic-mmu74ap5wr5n",
+          "scanned": false,
+          "scanTime": null,
+          "morningReminderSent": false,
+          "morningReminderTime": null,
+          "followupReminderSent": false,
+          "followupReminderTime": null,
+          "supervisorAlerted": false,
+          "supervisorAlertTime": null
+        }
+      },
+      "stats": {},
+      "lastUpdated": "2026-03-17T09:06:22.890Z"
+    },
+    {
+      "date": "2026-03-18",
+      "scans": {
+        "emp-mmu88c77w3hc": {
+          "empId": "emp-mmu88c77w3hc",
+          "empName": "Phani",
+          "clinicId": "clinic-mmu74ap5wr5n",
+          "scanned": false,
+          "scanTime": null,
+          "morningReminderSent": false,
+          "morningReminderTime": null,
+          "followupReminderSent": false,
+          "followupReminderTime": null,
+          "supervisorAlerted": false,
+          "supervisorAlertTime": null
+        },
+        "emp-mmvty17vksi1": {
+          "empId": "emp-mmvty17vksi1",
+          "empName": "sai kishore sir",
+          "clinicId": "clinic-mmu74ap5wr5n",
+          "scanned": false,
+          "scanTime": null,
+          "morningReminderSent": false,
+          "morningReminderTime": null,
+          "followupReminderSent": false,
+          "followupReminderTime": null,
+          "supervisorAlerted": false,
+          "supervisorAlertTime": null
+        },
+        "emp-mmvu207e3uci": {
+          "empId": "emp-mmvu207e3uci",
+          "empName": "swathi",
+          "clinicId": "clinic-mmu74ap5wr5n",
+          "scanned": false,
+          "scanTime": null,
+          "morningReminderSent": false,
+          "morningReminderTime": null,
+          "followupReminderSent": false,
+          "followupReminderTime": null,
+          "supervisorAlerted": false,
+          "supervisorAlertTime": null
+        }
+      },
+      "stats": {},
+      "lastUpdated": "2026-03-18T10:37:40.686Z"
+    },
+    {
+      "date": "2026-03-30",
+      "scans": {
+        "emp-mmu88c77w3hc": {
+          "empId": "emp-mmu88c77w3hc",
+          "empName": "Phani",
+          "clinicId": "clinic-mmu74ap5wr5n",
+          "scanned": false,
+          "scanTime": null,
+          "morningReminderSent": false,
+          "morningReminderTime": null,
+          "followupReminderSent": false,
+          "followupReminderTime": null,
+          "supervisorAlerted": false,
+          "supervisorAlertTime": null
+        },
+        "emp-mmvty17vksi1": {
+          "empId": "emp-mmvty17vksi1",
+          "empName": "sai kishore sir",
+          "clinicId": "clinic-mmu74ap5wr5n",
+          "scanned": false,
+          "scanTime": null,
+          "morningReminderSent": false,
+          "morningReminderTime": null,
+          "followupReminderSent": false,
+          "followupReminderTime": null,
+          "supervisorAlerted": false,
+          "supervisorAlertTime": null
+        },
+        "emp-mmvu207e3uci": {
+          "empId": "emp-mmvu207e3uci",
+          "empName": "swathi",
+          "clinicId": "clinic-mmu74ap5wr5n",
+          "scanned": false,
+          "scanTime": null,
+          "morningReminderSent": false,
+          "morningReminderTime": null,
+          "followupReminderSent": false,
+          "followupReminderTime": null,
+          "supervisorAlerted": false,
+          "supervisorAlertTime": null
+        }
+      },
+      "stats": {},
+      "lastUpdated": "2026-03-30T11:40:01.972Z"
+    },
+    {
+      "date": "2026-03-31",
+      "scans": {
+        "emp-mmu88c77w3hc": {
+          "empId": "emp-mmu88c77w3hc",
+          "empName": "Phani",
+          "clinicId": "clinic-mmu74ap5wr5n",
+          "scanned": false,
+          "scanTime": null,
+          "morningReminderSent": false,
+          "morningReminderTime": null,
+          "followupReminderSent": false,
+          "followupReminderTime": null,
+          "supervisorAlerted": false,
+          "supervisorAlertTime": null
+        },
+        "emp-mmvty17vksi1": {
+          "empId": "emp-mmvty17vksi1",
+          "empName": "sai kishore sir",
+          "clinicId": "clinic-mmu74ap5wr5n",
+          "scanned": false,
+          "scanTime": null,
+          "morningReminderSent": false,
+          "morningReminderTime": null,
+          "followupReminderSent": false,
+          "followupReminderTime": null,
+          "supervisorAlerted": false,
+          "supervisorAlertTime": null
+        },
+        "emp-mmvu207e3uci": {
+          "empId": "emp-mmvu207e3uci",
+          "empName": "swathi",
+          "clinicId": "clinic-mmu74ap5wr5n",
+          "scanned": false,
+          "scanTime": null,
+          "morningReminderSent": false,
+          "morningReminderTime": null,
+          "followupReminderSent": false,
+          "followupReminderTime": null,
+          "supervisorAlerted": false,
+          "supervisorAlertTime": null
+        }
+      },
+      "stats": {},
+      "lastUpdated": "2026-03-31T12:21:20.087Z"
+    },
+    {
+      "date": "2026-04-01",
+      "scans": {
+        "emp-mmu88c77w3hc": {
+          "empId": "emp-mmu88c77w3hc",
+          "empName": "Phani",
+          "clinicId": "clinic-mmu74ap5wr5n",
+          "scanned": false,
+          "scanTime": null,
+          "morningReminderSent": false,
+          "morningReminderTime": null,
+          "followupReminderSent": false,
+          "followupReminderTime": null,
+          "supervisorAlerted": false,
+          "supervisorAlertTime": null
+        },
+        "emp-mmvu207e3uci": {
+          "empId": "emp-mmvu207e3uci",
+          "empName": "swathi",
+          "clinicId": "clinic-mmu74ap5wr5n",
+          "scanned": false,
+          "scanTime": null,
+          "morningReminderSent": false,
+          "morningReminderTime": null,
+          "followupReminderSent": false,
+          "followupReminderTime": null,
+          "supervisorAlerted": false,
+          "supervisorAlertTime": null
+        }
+      },
+      "stats": {},
+      "lastUpdated": "2026-04-01T05:01:18.339Z"
+    }
+  ]
+}

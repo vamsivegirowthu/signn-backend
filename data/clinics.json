@@ -1,0 +1,30 @@
+{
+  "clinics": [
+    {
+      "id": "clinic-mmu74ap5wr5n",
+      "name": "vamsi",
+      "location": "hyderabad",
+      "supervisor": {
+        "name": "Vamsi",
+        "phone": "917032455410",
+        "whatsapp": "917032455410"
+      },
+      "staff": [
+        {
+          "id": "emp-mmu88c77w3hc",
+          "name": "Phani",
+          "role": "receptionist",
+          "phone": "918501830360",
+          "whatsapp": "918501830360"
+        },
+        {
+          "id": "emp-mmvu207e3uci",
+          "name": "swathi",
+          "role": "receptionist",
+          "phone": "918688416458",
+          "whatsapp": "918688416458"
+        }
+      ]
+    }
+  ]
+}
