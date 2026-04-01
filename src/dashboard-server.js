@@ -28,7 +28,13 @@ export function createDashboardServer({ scheduler, tracker, clinicData, logger }
   const app = express();
  
   const httpServer = createServer(app);
-  const io = new SocketIO(httpServer, { cors: { origin: '*' } });
+  const io = new SocketIO(httpServer, {
+  cors: {
+    origin: "*",
+    methods: ["GET", "POST"],
+    allowedHeaders: ["Content-Type"]
+  }
+});
 
  app.use(cors({
   origin: "*",
@@ -50,17 +56,7 @@ app.use(express.static(path.join(__dirname, '../public')));
 
   if (scheduler) scheduler.io = io;
   // 🔥 ADD THIS
-if (scheduler && scheduler.wa) {
-  scheduler.wa.onReady = () => {
-    console.log("WA CONNECTED");
-    io.emit('wa_connected');
-  };
 
-  scheduler.wa.onDisconnect = () => {
-    console.log("WA DISCONNECTED");
-    io.emit('wa_disconnected');
-  };
-}
 
   // STATUS / QR
   app.get('/api/status', (req, res) => {
