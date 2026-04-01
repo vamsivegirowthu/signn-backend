@@ -38,8 +38,6 @@ logger.info(`Loaded ${clinicData.clinics.length} clinics`);
 const tracker = new ScanTracker(logger);
 tracker.initializeClinics(clinicData.clinics);
 
-const waClient = new WhatsAppClient(io);
-
 // 🔥 STORE QR
 let latestQR = null;
 
@@ -63,6 +61,8 @@ const { httpServer, io } = createDashboardServer({
   clinicData,
   logger
 });
+
+const waClient = new WhatsAppClient(io);
 
 // ✅ when dashboard opens
 io.on('connection', (socket) => {
