@@ -80,8 +80,6 @@ httpServer.listen(PORT, '0.0.0.0', () => {
   logger.info(`🖥️ Server running on port ${PORT}`);
 });
 
-httpServer.on('request', app);
-
 logger.info('🔐 Initializing WhatsApp...');
 logger.info('📱 Open dashboard to scan QR code');
 
