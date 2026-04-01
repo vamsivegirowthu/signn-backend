@@ -29,7 +29,16 @@ export function createDashboardServer({ scheduler, tracker, clinicData, logger }
   const httpServer = createServer(app);
   const io = new SocketIO(httpServer, { cors: { origin: '*' } });
 
- app.use(cors());
+ app.use(cors({
+  origin: "*",
+  methods: ["GET", "POST"],
+  allowedHeaders: ["Content-Type"]
+}));
+  app.use((req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "*");
+  next();
+});
 app.use(express.json());
 
 app.use(express.static(path.join(__dirname, '../public')));
@@ -57,16 +66,15 @@ if (scheduler && scheduler.wa) {
     res.json({ connected: scheduler?.wa?.isReady?.() || false, qrAvailable: !!scheduler?.wa?.getQRCode?.(), stats: scheduler?.getStats?.() || {}, uptime: process.uptime() });
   });
 
-  app.get('/api/qr', async (req, res) => {
-    const qr = scheduler?.wa?.getQRCode?.();
-    if (!qr) return res.status(404).json({ error: 'No QR available' });
-    try {
-      const png = await QRCode.toBuffer(qr, { width: 300, margin: 2 });
-      res.setHeader('Content-Type', 'image/png');
-      res.setHeader('Cache-Control', 'no-cache');
-      res.send(png);
-    } catch(e) { res.status(500).json({ error: e.message }); }
-  });
+  app.get('/api/qr', (req, res) => {
+  const qr = scheduler?.wa?.getQRCode?.();
+
+  if (!qr) {
+    return res.status(404).json({ error: 'No QR available' });
+  }
+
+  res.json({ qr }); // ✅ SIMPLE FIX (NO IMAGE)
+});
 
   // SUMMARY / EMPLOYEES
   // 🔥 ADD THIS BLOCK HERE (IMPORTANT)
