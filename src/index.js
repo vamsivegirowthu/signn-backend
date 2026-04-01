@@ -135,7 +135,7 @@ waClient.onDisconnect = (reason) => {
 };
 
 // start
-//await waClient.initialize();
+await waClient.initialize();
 
 // graceful shutdown
 process.on('SIGINT', async () => {
