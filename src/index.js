@@ -80,6 +80,8 @@ httpServer.listen(PORT, '0.0.0.0', () => {
   logger.info(`🖥️ Server running on port ${PORT}`);
 });
 
+httpServer.on('request', app);
+
 logger.info('🔐 Initializing WhatsApp...');
 logger.info('📱 Open dashboard to scan QR code');
 
@@ -135,7 +137,7 @@ waClient.onDisconnect = (reason) => {
 };
 
 // start
-await waClient.initialize();
+//await waClient.initialize();
 
 // graceful shutdown
 process.on('SIGINT', async () => {
@@ -144,6 +146,11 @@ process.on('SIGINT', async () => {
   process.exit(0);
 });
 
-setInterval(() => {
-  console.log("Server alive...");
-}, 10000);
+import express from 'express';
+
+const app = express();
+
+app.get('/api/status', (req, res) => {
+  res.json({ status: "ok" });
+});
+
