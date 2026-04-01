@@ -39,9 +39,11 @@ export default class WhatsAppClient {
       // ✅ QR handling
       if (qr) {
         console.log("📡 QR GENERATED");
-        this.io.emit("qr_update", { qr });
+        QRCode.toDataURL(qr).then((url) => {
+  this.io.emit("qr_update", { qr: url });
+});
+}
        
-      }
 
       // ✅ connected
       if (connection === 'open') {
