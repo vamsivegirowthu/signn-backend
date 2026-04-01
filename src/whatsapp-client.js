@@ -8,7 +8,9 @@ import pino from 'pino';
 import QRCode from 'qrcode';
 
 export default class WhatsAppClient {
-  constructor() {
+  constructor(io) {
+  this.io = io;
+    
     this.sock = null;
 
     this.onQR = null;
@@ -37,13 +39,8 @@ export default class WhatsAppClient {
       // ✅ QR handling
       if (qr) {
         console.log("📡 QR GENERATED");
-
-        QRCode.toDataURL(qr)
-          .then((url) => {
-            console.log("✅ QR READY");
-           this.io.emit("qr_update", { qr });
-          })
-          .catch((err) => console.error(err));
+        this.io.emit("qr_update", { qr });
+       
       }
 
       // ✅ connected
@@ -88,7 +85,6 @@ export default class WhatsAppClient {
     const safeMessage = message ? String(message) : "Test message";
 
     return this.sock.sendMessage(number + "@s.whatsapp.net", {
-  image: { url: "http://localhost:3000/signn-logo.png" },
   caption: safeMessage
   });
   }
