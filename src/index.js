@@ -38,7 +38,7 @@ logger.info(`Loaded ${clinicData.clinics.length} clinics`);
 const tracker = new ScanTracker(logger);
 tracker.initializeClinics(clinicData.clinics);
 
-const waClient = new WhatsAppClient();
+const waClient = new WhatsAppClient(io);
 
 // 🔥 STORE QR
 let latestQR = null;
