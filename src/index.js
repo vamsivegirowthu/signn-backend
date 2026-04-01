@@ -42,7 +42,7 @@ tracker.initializeClinics(clinicData.clinics);
 let latestQR = null;
 
 const tempScheduler = {
-  wa: waClient,
+  wa: null,
   getStats: () => ({}),
   getActivityLog: () => [],
   sendMorningReminders: async () => ({ error: 'Not ready' }),
@@ -63,6 +63,7 @@ const { httpServer, io } = createDashboardServer({
 });
 
 const waClient = new WhatsAppClient(io);
+waClient.onQR = () => {}; 
 
 // ✅ when dashboard opens
 io.on('connection', (socket) => {
