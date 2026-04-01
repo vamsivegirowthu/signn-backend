@@ -63,6 +63,7 @@ const { httpServer, io } = createDashboardServer({
 });
 
 const waClient = new WhatsAppClient(io);
+tempScheduler.wa = waClient;
 waClient.onQR = () => {}; 
 
 // ✅ when dashboard opens
