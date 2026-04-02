@@ -1,6 +1,7 @@
 import 'dotenv/config';
 import pino from 'pino';
 import fs from 'fs';
+import QRCode from 'qrcode';
 
 
 import WhatsAppClient from './whatsapp-client.js';
@@ -88,12 +89,14 @@ logger.info('🔐 Initializing WhatsApp...');
 logger.info('📱 Open dashboard to scan QR code');
 
 // ✅ QR event
-waClient.onQR = (qr) => {
+waClient.onQR = async (qr) => {
   console.log("📡 QR GENERATED");
 
-  latestQR = qr;
+  const qrImage = await QRCode.toDataURL(qr);
 
-  io.emit('qr_update', { qr }); 
+  latestQR = qrImage;
+
+  io.emit('qr_update', { qr: qrImage }); 
 };
 
 // ✅ connected
