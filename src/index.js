@@ -6,6 +6,7 @@ import fs from 'fs';
 import WhatsAppClient from './whatsapp-client.js';
 import ScanTracker from './scan-tracker.js';
 import ReminderScheduler from './scheduler.js';
+import cors from 'cors';
 import { createDashboardServer } from './dashboard-server.js';
 
 const logger = pino({
@@ -55,12 +56,16 @@ const tempScheduler = {
 
 const PORT = process.env.PORT || 3000;
 
-const { httpServer, io } = createDashboardServer({
+const { httpServer, io, app } = createDashboardServer({
   scheduler: tempScheduler,
   tracker,
   clinicData,
   logger
 });
+
+app.use(cors({
+  origin: "*"
+}));
 
 const waClient = new WhatsAppClient(io);
 tempScheduler.wa = waClient;
