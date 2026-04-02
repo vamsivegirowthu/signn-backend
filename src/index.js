@@ -62,7 +62,6 @@ const { httpServer, io, app } = createDashboardServer({
   clinicData,
   logger
 });
-
 app.use(cors({
   origin: "*"
 }));
